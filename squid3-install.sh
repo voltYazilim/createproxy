@@ -7,7 +7,7 @@ if cat /etc/os-release | grep PRETTY_NAME | grep "Ubuntu 18.04"; then
     touch /etc/squid/passwd
     /bin/rm -f /etc/squid/squid.conf
     /usr/bin/touch /etc/squid/blacklist.acl
-    /usr/bin/wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubusercontent.com/zdenekslavik/CreateProxy/master/squid.conf
+    /usr/bin/wget --no-check-certificate -O /etc/squid/squid.conf https://raw.githubusercontent.com/londonertech/createproxy/master/squid.conf
     /sbin/iptables -I INPUT -p tcp --dport 3128 -j ACCEPT
     /sbin/iptables-save
     service squid restart
