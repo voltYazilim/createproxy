@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Squid Installer for CREATEPROXY.com
-# Email: info@createproxy.com
 
 if cat /etc/os-release | grep PRETTY_NAME | grep "Ubuntu 18.04"; then
     /usr/bin/apt update
